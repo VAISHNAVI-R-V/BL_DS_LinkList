@@ -2,11 +2,18 @@ package com.bl.linklist;
 
 public class LinkedListOperations {
     //Represent the head and tail of the singly linked list
+
     Node head;
     Node tail;
     int size;
 
     public void addNode(Node newNode) {
+
+    public Node head = null;
+    public Node tail = null;
+
+    public Node addNode(Node newNode) {
+
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -35,6 +42,8 @@ public class LinkedListOperations {
             newNode.setNext(temp);
         }
         size++;
+
+        return head; 
     }
 
     public void displayNode() {
