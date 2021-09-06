@@ -1,15 +1,18 @@
 package com.bl.linklist;
 
-public class Node <K> {
+public class Node<K> implements INode<K> {
     K key;
-    Node next;
+    INode next;
 
     public Node() {
     }
 
-    public Node(K key) {
-        this.key = key;
-        this.next = null;
+    public INode getNext() {
+        return next;
+    }
+
+    public void setNext(INode next) {
+        this.next = next;
     }
 
     public K getKey() {
@@ -20,11 +23,10 @@ public class Node <K> {
         this.key = key;
     }
 
-    public Node getNext() {
-        return next;
-    }
+    public Node(K key) {
+        this.key = key;
+        this.next = null;
 
-    public void setNext(Node next) {
-        this.next = next;
+
     }
 }
